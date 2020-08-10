@@ -47,7 +47,7 @@ end;
 function TControllerListBoxFactory.Principal(
   Container: TComponent): iControllerListBoxMenu;
 begin
-  Result := TControllerListBoxPrincipal.New(Container);
+  Result := TControllerListBoxPrincipal.Create(Container);
 end;
 
 end.

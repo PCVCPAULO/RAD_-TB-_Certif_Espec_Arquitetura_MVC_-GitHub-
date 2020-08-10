@@ -37,7 +37,7 @@ end;
 
 procedure TControllerListBoxItensCliente.onClick(Sender: TObject);
 begin
-  frmClientes.Show;
+   frmClientes.Show;
 end;
 
 function TControllerListBoxItensCliente.Show: TFmxObject;
@@ -46,7 +46,7 @@ begin
               .Default
               .Name('btnCliente')
               .Text('Clientes')
-//              .onClick(onClick)
+              .onClick(onClick)
               .Item;
 end;
 
