@@ -12,22 +12,15 @@ type
     class function New : iControllerListBoxFactory;
     function Default(Container: TComponent) : iControllerListBoxDefault;
     function Principal(Container: TComponent) : iControllerListBoxMenu;
-    function Produtos(Container: TComponent) : iControllerListBoxMenu;
-    function Clientes(Container: TComponent) : iControllerListBoxMenu;
+//    function Produtos(Container: TComponent) : iControllerListBoxMenu;
+//    function Clientes(Container: TComponent) : iControllerListBoxMenu;
   end;
 
 implementation
 
 { TControllerListBoxFactory }
 
-uses Menus.Controller.ListBox.Principal, Menus.Controller.ListBox.Clientes,
-  Menus.Controller.ListBox.Produtos;
-
-function TControllerListBoxFactory.Clientes(
-  Container: TComponent): iControllerListBoxMenu;
-begin
-   Result := TControllerListBoxClientes.New(Container);
-end;
+uses Menus.Controller.ListBox.Principal;
 
 constructor TControllerListBoxFactory.Create;
 begin
@@ -55,12 +48,6 @@ function TControllerListBoxFactory.Principal(
   Container: TComponent): iControllerListBoxMenu;
 begin
   Result := TControllerListBoxPrincipal.Create(Container);
-end;
-
-function TControllerListBoxFactory.Produtos(
-  Container: TComponent): iControllerListBoxMenu;
-begin
-   Result := TControllerListBoxProdutos.New(Container);
 end;
 
 end.

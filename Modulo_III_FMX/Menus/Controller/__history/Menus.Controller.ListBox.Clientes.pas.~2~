@@ -1,11 +1,11 @@
-unit Menus.Controller.ListBox.Principal;
+unit Menus.Controller.ListBox.Clientes;
 
 interface
 
 uses Menus.Controller.Interfaces, System.Classes;
 
 type
-  TControllerListBoxPrincipal = class(TInterfacedObject, iControllerListBoxMenu)
+  TControllerListBoxClientes = class(TInterfacedObject, iControllerListBoxMenu)
   private
     FContainer: TComponent;
   public
@@ -17,23 +17,25 @@ end;
 
 implementation
 
-{ TControllerListBoxPrincipal }
+{ TControllerListBoxClientes }
 
 uses Menus.Controller.ListBox.Factory, Menus.Controller.ListBox.Itens.Factory;
 
-constructor TControllerListBoxPrincipal.Create(Container: TComponent);
+constructor TControllerListBoxClientes.Create(Container: TComponent);
 begin
   FContainer := Container;
 end;
 
-destructor TControllerListBoxPrincipal.Destroy;
+destructor TControllerListBoxClientes.Destroy;
 begin
 
   inherited;
 end;
 
-procedure TControllerListBoxPrincipal.Exibir;
+procedure TControllerListBoxClientes.Exibir;
 begin
+    // Até foi com a vídeos-aulas até a aula 7 - adicionar botão
+
   TControllerListBoxFactory.New
     .Default(FContainer)
     .AddItem(TControllerListBoxItensFactory.New.Produto.Show)
@@ -41,10 +43,11 @@ begin
     .Exibir;
 end;
 
-class function TControllerListBoxPrincipal.New(
+class function TControllerListBoxClientes.New(
   Container: TComponent): iControllerListBoxMenu;
 begin
   Result := Self.Create(Container);
 end;
-// ok confere...
+
+
 end.

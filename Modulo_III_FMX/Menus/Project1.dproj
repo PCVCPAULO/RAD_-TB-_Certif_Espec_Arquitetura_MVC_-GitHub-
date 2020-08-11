@@ -421,6 +421,12 @@
             <Form>frmClientes</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Produtos.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Clientes.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.Forms.Default.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Button.Default.pas"/>
+        <DCCReference Include="Menus.Controller.ListBox.Button.Factory.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Button.Produto.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -464,7 +470,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="EXE\Project1.exe" Configuration="Debug" Class="ProjectOutput">
+                <DeployFile LocalName="D:\RAD_(TB)_Certif_Espec_Arquitetura MVC\Modulo_III_FMX\Menus\EXE\Project1.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Project1.exe</RemoteName>
                         <Overwrite>true</Overwrite>

@@ -14,13 +14,9 @@ uses
   Menus.Controller.ListBox.Principal in 'Controller\Menus.Controller.ListBox.Principal.pas',
   Menus.Controller.ListBox.Itens.Cliente in 'Controller\Menus.Controller.ListBox.Itens.Cliente.pas',
   Menus.View.Produtos in 'View\Menus.View.Produtos.pas' {frmProduto},
-  Menus.View.Clientes in 'View\Menus.View.Clientes.pas' {frmClientes},
+  Menus.View.Clientes in 'View\Menus.View.Clientes.pas' {frmCliente},
   Menus.Controller.ListBox.Produtos in 'Controller\Menus.Controller.ListBox.Produtos.pas',
-  Menus.Controller.ListBox.Clientes in 'Controller\Menus.Controller.ListBox.Clientes.pas',
-  Menus.Controller.Forms.Default in 'Controller\Menus.Controller.Forms.Default.pas',
-  Menus.Controller.ListBox.Button.Default in 'Controller\Menus.Controller.ListBox.Button.Default.pas',
-  Menus.Controller.ListBox.Button.Factory in 'Menus.Controller.ListBox.Button.Factory.pas',
-  Menus.Controller.ListBox.Button.Produto in 'Controller\Menus.Controller.ListBox.Button.Produto.pas';
+  Menus.Controller.ListBox.Clientes in 'Controller\Menus.Controller.ListBox.Clientes.pas';
 
 {$R *.res}
 

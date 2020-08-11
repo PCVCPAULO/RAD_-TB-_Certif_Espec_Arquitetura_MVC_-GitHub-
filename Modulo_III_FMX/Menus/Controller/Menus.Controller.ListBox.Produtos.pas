@@ -1,11 +1,11 @@
-unit Menus.Controller.ListBox.Principal;
+unit Menus.Controller.ListBox.Produtos;
 
 interface
 
 uses Menus.Controller.Interfaces, System.Classes;
 
 type
-  TControllerListBoxPrincipal = class(TInterfacedObject, iControllerListBoxMenu)
+  TControllerListBoxProdutos = class(TInterfacedObject, iControllerListBoxMenu)
   private
     FContainer: TComponent;
   public
@@ -17,31 +17,30 @@ end;
 
 implementation
 
-{ TControllerListBoxPrincipal }
+{ TControllerListBoxProdutos }
 
 uses Menus.Controller.ListBox.Factory, Menus.Controller.ListBox.Itens.Factory;
 
-constructor TControllerListBoxPrincipal.Create(Container: TComponent);
+constructor TControllerListBoxProdutos.Create(Container: TComponent);
 begin
   FContainer := Container;
 end;
 
-destructor TControllerListBoxPrincipal.Destroy;
+destructor TControllerListBoxProdutos.Destroy;
 begin
 
   inherited;
 end;
 
-procedure TControllerListBoxPrincipal.Exibir;
+procedure TControllerListBoxProdutos.Exibir;
 begin
   TControllerListBoxFactory.New
     .Default(FContainer)
-    .AddItem(TControllerListBoxItensFactory.New.Produto.Show)
     .addItem(TControllerListBoxItensFactory.New.Cliente.Show)
     .Exibir;
 end;
 
-class function TControllerListBoxPrincipal.New(
+class function TControllerListBoxProdutos.New(
   Container: TComponent): iControllerListBoxMenu;
 begin
   Result := Self.Create(Container);

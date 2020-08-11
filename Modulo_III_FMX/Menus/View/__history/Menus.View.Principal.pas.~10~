@@ -23,7 +23,7 @@ implementation
 
 {$R *.fmx}
 
-uses Menus.Controller.ListBox.Factory, Menus.View.Produtos, Menus.View.Clientes;
+uses Menus.Controller.ListBox.Factory;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin

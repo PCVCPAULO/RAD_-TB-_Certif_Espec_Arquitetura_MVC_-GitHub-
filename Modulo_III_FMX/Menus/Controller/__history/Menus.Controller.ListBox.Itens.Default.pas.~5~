@@ -60,8 +60,7 @@ end;
 function TControllerListBoxItensDefault.onClick(
   Value: TNotifyEvent): iControllerListBoxItensDefault;
 begin
-   Result := Self;
-   FListBoxItem.OnClick := Value;
+  FListBoxItem.OnClick := Value;
 end;
 
 function TControllerListBoxItensDefault.StyleLookup(

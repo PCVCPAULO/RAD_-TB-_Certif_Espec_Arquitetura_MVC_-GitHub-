@@ -19,10 +19,6 @@ type
       procedure Exibir;
     end;
 
-     iControllerListBoxButtonProduto = interface
-        ['{53EE2085-FAF7-49CC-96E0-26B881B023E9}']
-     end;
-
     iControllerListBoxItensFactory = interface
      ['{CE2D75AF-094E-4A5C-A563-92E9409D1807}']
      function Default : iControllerListBoxItensDefault;
@@ -35,12 +31,8 @@ type
       function Default(Container: TComponent) : iControllerListBoxDefault;
       function Principal(Container: TComponent) : iControllerListBoxMenu;
       function Produtos(Container: TComponent) : iControllerListBoxMenu;
-      function Clientes(Container: TComponent) : iControllerListBoxMenu;
+//    function Clientes(Container: TComponent) : iControllerListBoxMenu;
     end;
-
-     iControllerListBoxButtonFactory = interface
-        ['{404C63F7-D7AA-40A2-8945-C6328C05965D}']
-     end;
 
     iControllerListBoxItensDefault = interface
       ['{9E1C78AE-6554-4992-9F62-9BD32633C133}']
@@ -49,10 +41,6 @@ type
     function StyleLookup(Value : String) : iControllerListBoxItensDefault;
     function onClick(Value : TNotifyEvent) : iControllerListBoxItensDefault;
     function Item : TFMXObject;
-    end;
-
-    iControllerListBoxButtonDefault = interface
-       ['{895E3FB7-168D-4043-83D6-436D2F760FE5}']
     end;
 
     iControllerListBoxDefault = interface

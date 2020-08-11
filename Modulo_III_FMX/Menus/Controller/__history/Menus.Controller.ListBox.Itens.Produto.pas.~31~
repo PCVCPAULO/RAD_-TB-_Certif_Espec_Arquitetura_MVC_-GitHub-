@@ -2,8 +2,7 @@ unit Menus.Controller.ListBox.Itens.Produto;
 
 interface
 
-uses Menus.Controller.Interfaces, FMX.Types, Menus.Controller.ListBox.Itens.Default,
-  Menus.Controller.Forms.Default;
+uses Menus.Controller.Interfaces, FMX.Types, Menus.Controller.ListBox.Itens.Default;
 
 type
   TControllerListBoxItensProduto = class(TInterfacedObject, iControllerListBoxItemForm)

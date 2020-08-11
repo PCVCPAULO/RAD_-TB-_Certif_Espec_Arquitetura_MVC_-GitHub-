@@ -2,8 +2,7 @@ unit Menus.Controller.ListBox.Itens.Produto;
 
 interface
 
-uses Menus.Controller.Interfaces, FMX.Types, Menus.Controller.ListBox.Itens.Default,
-  Menus.Controller.Forms.Default;
+uses Menus.Controller.Interfaces, FMX.Types, Menus.Controller.ListBox.Itens.Default;
 
 type
   TControllerListBoxItensProduto = class(TInterfacedObject, iControllerListBoxItemForm)
@@ -38,7 +37,7 @@ end;
 
 procedure TControllerListBoxItensProduto.onClick(Sender: TObject);
 begin
-  TControllerFormsDefault.CreateForm('TfrmProduto');
+   frmProduto.Show;
 end;
 
 function TControllerListBoxItensProduto.Show: TFmxObject;

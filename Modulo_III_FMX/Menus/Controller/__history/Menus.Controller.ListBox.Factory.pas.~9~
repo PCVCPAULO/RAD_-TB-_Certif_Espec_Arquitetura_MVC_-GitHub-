@@ -20,13 +20,12 @@ implementation
 
 { TControllerListBoxFactory }
 
-uses Menus.Controller.ListBox.Principal, Menus.Controller.ListBox.Clientes,
-  Menus.Controller.ListBox.Produtos;
+uses Menus.Controller.ListBox.Principal, Menus.Controller.ListBox.Clientes;
 
 function TControllerListBoxFactory.Clientes(
   Container: TComponent): iControllerListBoxMenu;
 begin
-   Result := TControllerListBoxClientes.New(Container);
+   Result :=
 end;
 
 constructor TControllerListBoxFactory.Create;
