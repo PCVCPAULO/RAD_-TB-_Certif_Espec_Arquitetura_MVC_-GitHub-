@@ -8,7 +8,7 @@ uses
   FMX.Controls.Presentation;
 
 type
-  TfrmProduto = class(TForm)
+  TfrmProdutos = class(TForm)
     ToolBar1: TToolBar;
     Label1: TLabel;
   private
@@ -18,10 +18,13 @@ type
   end;
 
 var
-  frmProduto: TfrmProduto;
+  frmProdutos: TfrmProdutos;
 
 implementation
 
 {$R *.fmx}
+
+initialization
+   RegisterFmxClasses([TfrmProdutos]);
 
 end.

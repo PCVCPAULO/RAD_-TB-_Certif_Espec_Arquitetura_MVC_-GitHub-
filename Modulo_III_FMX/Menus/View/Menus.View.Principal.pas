@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts;
 
 type
-  TfrmPrincipal = class(TForm)
+  TForm1 = class(TForm)
     Layout1: TLayout;
     procedure FormCreate(Sender: TObject);
   private
@@ -17,17 +17,17 @@ type
   end;
 
 var
-  frmPrincipal: TfrmPrincipal;
+  Form1: TForm1;
 
 implementation
 
 {$R *.fmx}
 
-uses Menus.Controller.ListBox.Factory, Menus.View.Produtos, Menus.View.Clientes;
+uses Menus.Controller.ListBox.Factory;
 
-procedure TfrmPrincipal.FormCreate(Sender: TObject);
+procedure TForm1.FormCreate(Sender: TObject);
 begin
- TControllerListBoxFactory.New.Principal(Layout1).Exibir;
+   TControllerListBoxFactory.New.Principal(Layout1).Exibir;
 end;
 
 end.

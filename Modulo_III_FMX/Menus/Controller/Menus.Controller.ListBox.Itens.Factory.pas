@@ -6,21 +6,20 @@ uses Menus.Controller.Interfaces, Menus.Controller.ListBox.Itens.Default;
 
 type
   TControllerListBoxItensFactory = class(TInterfacedObject, iControllerListBoxItensFactory)
-   constructor Create;
-   destructor Destroy; override;
-   class function New : iControllerListBoxItensFactory;
-   function Default : iControllerListBoxItensDefault;
-   function Produto : iControllerListBoxItemForm;
-   function Cliente : iControllerListBoxItemForm;
+    constructor Create;
+    destructor Destroy; override;
+    class function New : iControllerListBoxItensFactory;
+    function Default : iControllerListBoxItensDefault;
+    function Produto : iControllerListBoxItemForm;
+    function Cliente : iControllerListBoxItemForm;
   end;
 
 implementation
 
-
 { TControllerListBoxItensFactory }
 
 uses Menus.Controller.ListBox.Itens.Produto,
-  Menus.Controller.ListBox.Itens.Cliente;
+  Menus.Controller.ListBox.Itens.Clientes;
 
 function TControllerListBoxItensFactory.Cliente: iControllerListBoxItemForm;
 begin

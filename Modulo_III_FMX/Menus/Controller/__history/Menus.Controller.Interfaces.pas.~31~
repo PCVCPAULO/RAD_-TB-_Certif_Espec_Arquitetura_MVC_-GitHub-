@@ -1,0 +1,55 @@
+unit Menus.Controller.Interfaces;
+
+interface
+
+uses
+  System.Classes, FMX.Types;
+
+type
+   iControllerListBoxItensDefault = interface;
+   iControllerListBoxDefault = interface;
+
+   iControllerListBoxItemForm = interface
+      ['{019B0BA5-C94E-4EDA-9A56-DE79EDF17D55}']
+   function Show : TFmxObject;
+   end;
+
+   iControllerListBoxMenu = interface
+      ['{91002107-583E-4468-BF77-3B7813DBE75A}']
+   procedure Exibir;
+   end;
+
+   iControllerListBoxItensFactory = interface
+      ['{CFECCFCF-C06C-4240-B8FF-BFE0B4CD0812}']
+   function Default : iControllerListBoxItensDefault;
+   function Produto : iControllerListBoxItemForm;
+   end;
+
+   iControllerListBoxFactory = interface
+      ['{C1E07CAF-0E8F-4B76-B9E0-2EA5A4DFCDFF}']
+   function Default(Container : TComponent) : iControllerListBoxDefault;
+   function Principal(Container : TComponent) : iControllerListBoxMenu;
+   end;
+
+   iControllerListBoxItensDefault = interface
+      ['{669FE0E0-794C-4F60-8FA7-352B188AE351}']
+    function Name(Value : String) : iControllerListBoxItensDefault;
+    function Text(Value : String) : iControllerListBoxItensDefault;
+    function StyleLookup(Value : String) : iControllerListBoxItensDefault;
+    function onClick(Value : TNotifyEvent) : iControllerListBoxItensDefault;
+    function Item : TFMXObject;
+   end;
+
+   iControllerListBoxDefault = interface
+   ['{7E308CFA-14D3-433A-A59A-C2AD75E40600}']
+   function Name(Value : String) : iControllerListBoxDefault;
+   function Align(Value : TAlignLayout) : iControllerListBoxDefault;
+   function ItemHeight(Value : Integer) : iControllerListBoxDefault;
+   function AddItem(Value : TFmxObject) : iControllerListBoxDefault;
+   function Lista : TFmxObject;
+   procedure Exibir;
+   end;
+
+implementation
+
+end.

@@ -1,7 +1,7 @@
-object frmProduto: TfrmProduto
+object frmProdutos: TfrmProdutos
   Left = 0
   Top = 0
-  Caption = 'Form1'
+  Caption = 'Form2'
   ClientHeight = 480
   ClientWidth = 640
   FormFactor.Width = 320
@@ -10,18 +10,19 @@ object frmProduto: TfrmProduto
   DesignerMasterStyle = 0
   object ToolBar1: TToolBar
     Size.Width = 640.000000000000000000
-    Size.Height = 40.000000000000000000
+    Size.Height = 41.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 1
     object Label1: TLabel
       Align = Contents
-      StyledSettings = [Family]
+      StyledSettings = []
       Size.Width = 640.000000000000000000
-      Size.Height = 40.000000000000000000
+      Size.Height = 41.000000000000000000
       Size.PlatformDefault = False
-      TextSettings.Font.Size = 20.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claBlueviolet
+      TextSettings.Font.Family = 'Fira Code'
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00060000000000000004000000}
+      TextSettings.FontColor = claBrown
       TextSettings.HorzAlign = Center
       Text = 'Produtos'
       TabOrder = 1

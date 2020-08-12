@@ -20,7 +20,7 @@ type
     function AddItem(Value : TFmxObject) : iControllerListBoxDefault;
     function Lista : TFmxObject;
     procedure Exibir;
-end;
+  end;
 
 implementation
 
@@ -82,8 +82,8 @@ begin
   FListBox.Name := Value;
 end;
 
-class function TControllerListBoxDefault.New(
-  Container: TComponent): iControllerListBoxDefault;
+class function TControllerListBoxDefault.New(Container: TComponent)
+  : iControllerListBoxDefault;
 begin
   Result := Self.Create(Container);
 end;

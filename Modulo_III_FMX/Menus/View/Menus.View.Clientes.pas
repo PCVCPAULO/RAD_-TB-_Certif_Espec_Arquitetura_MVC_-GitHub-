@@ -24,4 +24,7 @@ implementation
 
 {$R *.fmx}
 
+initialization
+   RegisterFmxClasses([TfrmClientes]);
+
 end.

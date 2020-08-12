@@ -1,0 +1,28 @@
+unit Menus.Controller.Interfaces;
+
+interface
+
+uses
+  System.Classes, FMX.Types;
+
+type
+   iControllerListBoxItensFactory = interface
+      ['{CFECCFCF-C06C-4240-B8FF-BFE0B4CD0812}']
+   end;
+
+   iControllerListBoxFactory = interface
+      ['{C1E07CAF-0E8F-4B76-B9E0-2EA5A4DFCDFF}']
+   end;
+
+   iControllerListBoxItensDefault = interface
+      ['{669FE0E0-794C-4F60-8FA7-352B188AE351}']
+    function Name(Value : String) : iControllerListBoxItensDefault;
+    function Text(Value : String) : iControllerListBoxItensDefault;
+    function StyleLookup(Value : String) : iControllerListBoxItensDefault;
+    function onClick(Value : TNotifyEvent) : iControllerListBoxItensDefault;
+    function Item : TFMXObject;
+   end;
+
+implementation
+
+end.

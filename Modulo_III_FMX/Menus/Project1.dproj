@@ -400,33 +400,28 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Model\Menus.Model.Interfaces.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.Interfaces.pas"/>
         <DCCReference Include="View\Menus.View.Principal.pas">
-            <Form>frmPrincipal</Form>
+            <Form>Form1</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Controller\Menus.Controller.Interfaces.pas"/>
-        <DCCReference Include="Model\Menus.Model.Interfaces.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Factory.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Factory.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Default.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Default.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Produto.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Principal.pas"/>
-        <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Cliente.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Clientes.pas"/>
         <DCCReference Include="View\Menus.View.Produtos.pas">
-            <Form>frmProduto</Form>
+            <Form>frmProdutos</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="View\Menus.View.Clientes.pas">
             <Form>frmClientes</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="Controller\Menus.Controller.ListBox.Produtos.pas"/>
-        <DCCReference Include="Controller\Menus.Controller.ListBox.Clientes.pas"/>
         <DCCReference Include="Controller\Menus.Controller.Forms.Default.pas"/>
-        <DCCReference Include="Controller\Menus.Controller.ListBox.Button.Default.pas"/>
-        <DCCReference Include="Menus.Controller.ListBox.Button.Factory.pas"/>
-        <DCCReference Include="Controller\Menus.Controller.ListBox.Button.Produto.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

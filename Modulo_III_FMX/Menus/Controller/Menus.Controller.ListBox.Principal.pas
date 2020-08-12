@@ -13,7 +13,7 @@ type
     destructor Destroy; override;
     class function New(Container: TComponent): iControllerListBoxMenu;
     procedure Exibir;
-end;
+  end;
 
 implementation
 
@@ -37,14 +37,15 @@ begin
   TControllerListBoxFactory.New
     .Default(FContainer)
     .AddItem(TControllerListBoxItensFactory.New.Produto.Show)
-    .addItem(TControllerListBoxItensFactory.New.Cliente.Show)
+    .AddItem(TControllerListBoxItensFactory.New.Cliente.Show)
     .Exibir;
 end;
 
-class function TControllerListBoxPrincipal.New(
-  Container: TComponent): iControllerListBoxMenu;
+class function TControllerListBoxPrincipal.New(Container: TComponent)
+  : iControllerListBoxMenu;
 begin
   Result := Self.Create(Container);
 end;
-// ok confere...
+// confere
+
 end.

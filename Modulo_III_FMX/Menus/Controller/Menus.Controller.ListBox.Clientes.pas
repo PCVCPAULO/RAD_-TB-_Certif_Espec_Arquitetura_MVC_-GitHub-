@@ -2,49 +2,52 @@ unit Menus.Controller.ListBox.Clientes;
 
 interface
 
-uses Menus.Controller.Interfaces, System.Classes;
+uses Menus.Controller.Interfaces, FMX.Types, Menus.Controller.Forms.Default;
 
 type
-  TControllerListBoxClientes = class(TInterfacedObject, iControllerListBoxMenu)
-  private
-    FContainer: TComponent;
-  public
-    constructor Create(Container: TComponent);
+  TControllerListBoxItensCliente = class(TInterfacedObject, iControllerListBoxItemForm)
+    constructor Create;
     destructor Destroy; override;
-    class function New(Container: TComponent): iControllerListBoxMenu;
-    procedure Exibir;
-end;
+    class function New : iControllerListBoxItemForm;
+    function Show : TFmxObject;
+    procedure onClick(Sender : TObject);
+  end;
 
 implementation
 
-{ TControllerListBoxClientes }
+{ TControllerListBoxItensCliente }
 
-uses Menus.Controller.ListBox.Factory, Menus.Controller.ListBox.Itens.Factory;
+uses Menus.Controller.ListBox.Itens.Factory;
 
-constructor TControllerListBoxClientes.Create(Container: TComponent);
+constructor TControllerListBoxItensCliente.Create;
 begin
-  FContainer := Container;
+
 end;
 
-destructor TControllerListBoxClientes.Destroy;
+destructor TControllerListBoxItensCliente.Destroy;
 begin
 
   inherited;
 end;
 
-procedure TControllerListBoxClientes.Exibir;
+class function TControllerListBoxItensCliente.New: iControllerListBoxItemForm;
 begin
-  TControllerListBoxFactory.New
-    .Default(FContainer)
-    .AddItem(TControllerListBoxItensFactory.New.Produto.Show)
-    .Exibir;
+  Result := Self.Create;
 end;
 
-class function TControllerListBoxClientes.New(
-  Container: TComponent): iControllerListBoxMenu;
+procedure TControllerListBoxItensCliente.onClick(Sender: TObject);
 begin
-  Result := Self.Create(Container);
+  TControllerFormsDefault.CreateForm('TfrmClientes');
 end;
-// ok confere...
+
+function TControllerListBoxItensCliente.Show: TFmxObject;
+begin
+  Result := TControllerListBoxItensFactory.New
+              .Default
+              .Name('btnCliente')
+              .Text('Cliente')
+              .onClick(onClick)
+              .Item;
+end;
+
 end.
-

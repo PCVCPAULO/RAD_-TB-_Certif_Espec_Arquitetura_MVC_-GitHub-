@@ -46,13 +46,12 @@ end;
 function TControllerListBoxItensDefault.Name(
   Value: String): iControllerListBoxItensDefault;
 begin
-// se é um funtion que retorna a mesma interface, então o result é self
-
   Result := Self;
   FListBoxItem.Name := Value;
 end;
 
-class function TControllerListBoxItensDefault.New: iControllerListBoxItensDefault;
+class function TControllerListBoxItensDefault.New
+  : iControllerListBoxItensDefault;
 begin
   Result := Self.Create;
 end;
@@ -60,8 +59,8 @@ end;
 function TControllerListBoxItensDefault.onClick(
   Value: TNotifyEvent): iControllerListBoxItensDefault;
 begin
-   Result := Self;
-   FListBoxItem.OnClick := Value;
+  Result := Self;
+  FListBoxItem.OnClick := Value;
 end;
 
 function TControllerListBoxItensDefault.StyleLookup(

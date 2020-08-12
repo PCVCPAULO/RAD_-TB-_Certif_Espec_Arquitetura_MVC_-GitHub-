@@ -3,29 +3,24 @@ program Project1;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  Menus.View.Principal in 'View\Menus.View.Principal.pas' {frmPrincipal},
-  Menus.Controller.Interfaces in 'Controller\Menus.Controller.Interfaces.pas',
   Menus.Model.Interfaces in 'Model\Menus.Model.Interfaces.pas',
+  Menus.Controller.Interfaces in 'Controller\Menus.Controller.Interfaces.pas',
+  Menus.View.Principal in 'View\Menus.View.Principal.pas' {Form1},
   Menus.Controller.ListBox.Itens.Factory in 'Controller\Menus.Controller.ListBox.Itens.Factory.pas',
   Menus.Controller.ListBox.Factory in 'Controller\Menus.Controller.ListBox.Factory.pas',
   Menus.Controller.ListBox.Itens.Default in 'Controller\Menus.Controller.ListBox.Itens.Default.pas',
   Menus.Controller.ListBox.Default in 'Controller\Menus.Controller.ListBox.Default.pas',
   Menus.Controller.ListBox.Itens.Produto in 'Controller\Menus.Controller.ListBox.Itens.Produto.pas',
   Menus.Controller.ListBox.Principal in 'Controller\Menus.Controller.ListBox.Principal.pas',
-  Menus.Controller.ListBox.Itens.Cliente in 'Controller\Menus.Controller.ListBox.Itens.Cliente.pas',
-  Menus.View.Produtos in 'View\Menus.View.Produtos.pas' {frmProduto},
+  Menus.Controller.ListBox.Itens.Clientes in 'Controller\Menus.Controller.ListBox.Itens.Clientes.pas',
+  Menus.View.Produtos in 'View\Menus.View.Produtos.pas' {frmProdutos},
   Menus.View.Clientes in 'View\Menus.View.Clientes.pas' {frmClientes},
-  Menus.Controller.ListBox.Produtos in 'Controller\Menus.Controller.ListBox.Produtos.pas',
-  Menus.Controller.ListBox.Clientes in 'Controller\Menus.Controller.ListBox.Clientes.pas',
-  Menus.Controller.Forms.Default in 'Controller\Menus.Controller.Forms.Default.pas',
-  Menus.Controller.ListBox.Button.Default in 'Controller\Menus.Controller.ListBox.Button.Default.pas',
-  Menus.Controller.ListBox.Button.Factory in 'Menus.Controller.ListBox.Button.Factory.pas',
-  Menus.Controller.ListBox.Button.Produto in 'Controller\Menus.Controller.ListBox.Button.Produto.pas';
+  Menus.Controller.Forms.Default in 'Controller\Menus.Controller.Forms.Default.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TForm1, Form1);
   Application.Run;
 end.
